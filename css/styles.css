@@ -9,6 +9,7 @@
     --clr-button-on: #404bbf;
     --color-wiete-foo: #e7e9fc;
     --font-family-big: "Raleway";
+    --border-logo-client: #8E8F99
   }
   body {
     font-family: "Roboto", sans-serif;
@@ -150,9 +151,15 @@
     text-align: center;
   }
   .hero-image {
-    background:var(--color-primary-dark);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)), url("../images/people-office.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
     padding-top: 188px;
     padding-bottom: 188px;
+    max-width: 1440px;
+    margin: 0 auto;
+
   }
   .hero-conteiner {
     margin: 0 auto;
@@ -187,7 +194,9 @@
   .img-sl {
     
   }
-  
+  .li-sekondery-conteiner {
+    flex-basis: calc();
+  }
   .section-too-p {
     color: var(--color-primary);
     font-size: 16px;
@@ -255,10 +264,48 @@
     color: var(--color-primary);
     text-align: center;
   }
+
+  .socials-lisst {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+  }
+  .socials-item {
+    width: 40px;
+    height: 40px;
+  }
+  .socials-link {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-button-off);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: var(--clr-background-dark);
+    border-radius: 50%;
+  }
+  .socials-link:hover {
+    background-color: var(--clr-button-on);
+  }
+  .socials-link:focus {
+    background-color: var(--clr-button-on);
+  }
+  .socials-icon {
+    width: 16px;
+    height: 16px;
+  }
+
   .footer-fon {
     background: var(--color-primary-dark);
     padding-top: 100px;
     padding-bottom: 100px;
+  }
+  .footer-conteiner {
+    display: flex;
+    gap: 120px;
+  }
+  .footer-mar {
+    margin-bottom: 16px;
   }
   .footer-p {
     font-size: 16px;
@@ -268,6 +315,42 @@
     width: 264px;
     margin-top: 16px;
     margin-bottom: 0;
+  }
+  .footer-social-media {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--clr-primary-inverted);
+    letter-spacing: 0.02em;
+    padding-bottom: 16px;
+  }
+  
+  .footer-lisst {
+    display: flex;
+    gap: 16px;
+  }
+  .footer-item {
+    width: 40px;
+    height: 40px;
+  }
+  .footer-socials-link {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: var(--clr-background-dark);
+    border-radius: 50%;
+  }
+  .footer-socials-link:hover {
+    background: #31d0aa;
+  }
+  .footer-socials-icon {
+    width: 24px;
+    height: 24px;
   }
   /* PAGE 2 */
   .button-portfolio {
@@ -436,4 +519,102 @@
     max-width: 100%;
     height: auto;
     mix-blend-mode: normal;
+  }
+  .advantages-list {
+    width: 264px;
+    height: 112px;
+    background: var(--clr-background-dark);
+    border-radius: 4px;
+    margin-bottom: 8px;
+    fill: var(--color-primary-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .advantages-icon {
+    width: 64px;
+    height: 64px;
+  }
+  .advantages {
+    width: 264px;
+    height: 112px;
+    background: var(--clr-background-dark);
+    border-radius: 4px;
+    padding-bottom: 8px;
+  }
+  .advantages-link {
+    width: 100%;
+    height: 100%;
+    fill: var(--color-primary-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .advantages-icon-antena {
+    width: 59.72px;
+    height: 64px;
+  }
+  .advantages-icon-clock {
+    width: 61.22px;
+    height: 64px;
+  }
+  .advantages-icon-diagram {
+    width: 64px;
+    height: 49.09px;
+  }
+  .advantages-icon-astronaut {
+    width: 50.13px;
+    height: 55.46px;
+  }
+
+  .customers-box {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .customers {
+    text-align: center;
+  
+    letter-spacing: 0.02em;
+    font-size: 36px;
+    line-height: 1.1;
+  
+    margin-bottom: 72px;
+    color: var(--color-primary-dark);
+  }
+  .customers-list {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+  }
+  .customers-item {
+    width: 168px;
+    height: 88px;
+    border: 1px var(--border-logo-client);
+    border-radius: 4px;
+  }
+  .customers-link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: var(--color-customers);
+    border: 1px solid var(--color-customers);
+    border-radius: 4px;
+  }
+  .customers-link:hover {
+    fill: var(--clr-button-on);
+    border: 1px solid var(--clr-button-on);
+    border-radius: 4px;
+  }
+  .customers-link:focus {
+    fill: var(--clr-button-on);
+    border: 1px solid var(--clr-button-on);
+    border-radius: 4px;
+  }
+  
+  .customers-icon {
+    width: 104px;
+    height: 56px;
   }
