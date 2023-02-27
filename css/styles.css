@@ -9,6 +9,7 @@
     --clr-button-on: #404bbf;
     --color-wiete-foo: #e7e9fc;
     --font-family-big: "Raleway";
+    --color-customers: #8e8f99;
     --border-logo-client: #8E8F99
   }
   body {
@@ -51,6 +52,7 @@
   .page-header {
     text-decoration: none;
     border-bottom: 1px solid var(--color-wiete-foo);
+    
   }
   .header-conteiner {
     display: flex;
@@ -69,9 +71,13 @@
   .page-addres {
     display: flex;
     gap: 40px;
+    font-style: normal;
   }
   .section {
     padding: 120px 0;
+  }
+  .non-padding {
+    padding-top: 0px;
   }
   .padding-top-non {
     padding-top: 0px;
@@ -98,6 +104,7 @@
   }
   .navigation .link:hover {
     color: var(--clr-button-on);
+    letter-spacing: 0.02em;
   }
   .mail {
     font-size: 16px;
@@ -137,6 +144,8 @@
   }
   .logo-second-f {
     color: var(--clr-background-dark);
+    font-family: var(--font-family-big);
+    letter-spacing: 0.03em;
   }
   .logo-second {
     color: var(--color-primary-dark);
@@ -213,6 +222,9 @@
     margin-bottom: 72px;
     padding-top: 0;
   }
+  .section-background {
+    background: var(--clr-background-dark);
+  }
   .team {
     font-size: 36px;
     line-height: 1.11;
@@ -263,6 +275,7 @@
     letter-spacing: 0.02em;
     color: var(--color-primary);
     text-align: center;
+    margin-bottom: 8px;
   }
 
   .socials-lisst {
@@ -395,6 +408,7 @@
     border: 1px solid var(--color-wiete-foo);
     border-radius: 4px;
     padding: 12px 24px;
+    font-family: "Roboto";
   }
   .but:hover {
     background: var(--clr-button-on);
@@ -405,6 +419,20 @@
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
+    box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.1);
+    font-family: "Roboto";
+  }
+  .but:focus {
+    background: var(--clr-button-on);
+    color: var(--clr-primary-inverted);
+    border: 1px solid var(--color-wiete-foo);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.1);
+    font-family: "Roboto";
   }
   .but-app {
     background: var(--clr-background-dark);
@@ -482,12 +510,14 @@
   .name-info {
     flex-basis: calc((100% - 48px) / 3);
     display: list-item;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     
   }
   .service-conteiner {
     display: flex;
     flex-wrap: wrap;
     gap: 48px 24px;
+    padding-bottom: 120px;
   }
   .section-presentation {
     padding-bottom: 120px;
@@ -503,6 +533,7 @@
   }
   .border-text {
     border: 1px solid var(--color-wiete-foo);
+    border-top: none;
     padding-left: 16px;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -515,10 +546,18 @@
     color: var(--color-primary);
   }  
   .portfolio-img { 
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
+  .portfolio-img:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  }
+  .foto-portfolio {
     display: block;
     max-width: 100%;
     height: auto;
-    mix-blend-mode: normal;
   }
   .advantages-list {
     width: 264px;
